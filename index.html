@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AmberTech - Complete Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
+    .rotate-anim {
+      transition: transform 0.5s ease;
+    }
+    
+  </style>
+  
+</head>
+<body class="bg-gray-50 text-gray-800 transition duration-300 dark:bg-gray-900 dark:text-[#F0FFFF] scroll-smooth">
+
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-800 shadow p-4 flex justify-between items-center sticky top-0 z-50">
+    <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">AmberTech</h1>
+    <div class="space-x-4">
+      <a href="#home" class="hover:text-blue-500 dark:text-[#F0FFFF]">Home</a>
+      <a href="#pricing" class="hover:text-blue-500 dark:text-[#F0FFFF]">Pricing</a>
+      <a href="#services" class="hover:text-blue-500 dark:text-[#F0FFFF]">Services</a>
+      <a href="#gallery" class="hover:text-blue-500 dark:text-[#F0FFFF]">Gallery</a>
+      <a href="#faq" class="hover:text-blue-500 dark:text-[#F0FFFF]">FAQ</a>
+      <a href="#testimonials" class="hover:text-blue-500 dark:text-[#F0FFFF]">Testimonials</a>
+      <a href="#contact" class="hover:text-blue-500 dark:text-[#F0FFFF]">Contact</a>
+    </div>
+    
+    <!-- Dark Mode Toggle Button -->
+<button id="darkModeBtn" onclick="toggleDarkMode()" class="ml-4 w-10 h-10 flex items-center justify-center rounded-full transition-transform duration-500 bg-gray-200 dark:bg-gray-600 rotate-anim">
+  <span id="modeIcon" class="text-xl">🌙</span>
+</button>
+
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="text-center py-16 bg-blue-100 dark:bg-blue-900">
+    <h2 class="text-4xl font-bold dark:text-[#F0FFFF]">Welcome to AmberTech</h2>
+    <p class="mt-4 text-lg dark:text-[#F0FFFF]">We create beautiful websites with love and creativity!</p>
+    <a href="#pricing" class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 dark:text-[#F0FFFF]">Explore Plans</a>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-16 px-4 bg-white dark:bg-gray-800">
+    <h2 class="text-2xl font-bold text-center mb-10 dark:text-[#F0FFFF]">Pricing Plans</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="plan border p-6 rounded-lg shadow hover:shadow-lg cursor-pointer" onclick="selectPlan(this)">
+        <h3 class="text-xl font-semibold mb-4 dark:text-[#F0FFFF]">Basic</h3>
+        <p class="text-4xl font-bold dark:text-[#F0FFFF]">$10</p>
+        <ul class="mt-4 space-y-2 dark:text-[#F0FFFF]">
+          <li>✔ 1 Page Website</li>
+          <li>✔ Mobile Friendly</li>
+        </ul>
+      </div>
+      <div class="plan border p-6 rounded-lg shadow hover:shadow-lg cursor-pointer" onclick="selectPlan(this)">
+        <h3 class="text-xl font-semibold mb-4 dark:text-[#F0FFFF]">Pro</h3>
+        <p class="text-4xl font-bold dark:text-[#F0FFFF]">$25</p>
+        <ul class="mt-4 space-y-2 dark:text-[#F0FFFF]">
+          <li>✔ 5 Pages</li>
+          <li>✔ Contact Form</li>
+        </ul>
+      </div>
+      <div class="plan border p-6 rounded-lg shadow hover:shadow-lg cursor-pointer" onclick="selectPlan(this)">
+        <h3 class="text-xl font-semibold mb-4 dark:text-[#F0FFFF]">Premium</h3>
+        <p class="text-4xl font-bold dark:text-[#F0FFFF]">$50</p>
+        <ul class="mt-4 space-y-2 dark:text-[#F0FFFF]">
+          <li>✔ Unlimited Pages</li>
+          <li>✔ SEO + Support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 px-6 bg-gray-100 dark:bg-gray-700">
+    <h2 class="text-2xl font-bold text-center mb-10 dark:text-[#F0FFFF]">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-2 dark:text-[#F0FFFF]">Web Design</h3>
+        <p class="dark:text-[#F0FFFF]">Modern and responsive design for all devices.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-2 dark:text-[#F0FFFF]">Web Development</h3>
+        <p class="dark:text-[#F0FFFF]">Fully coded websites using latest technologies.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-2 dark:text-[#F0FFFF]">SEO Services</h3>
+        <p class="dark:text-[#F0FFFF]">Help your website rank higher on Google.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-16 px-6 bg-white dark:bg-gray-800">
+    <h2 class="text-2xl font-bold text-center mb-10 dark:text-[#F0FFFF]">Gallery</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+      <img src="https://picsum.photos/id/1011/300/200" class="rounded-lg shadow hover:scale-105 transition" alt="Gallery Image">
+      <img src="https://picsum.photos/id/1025/300/200" class="rounded-lg shadow hover:scale-105 transition" alt="Gallery Image">
+      <img src="https://picsum.photos/id/1035/300/200" class="rounded-lg shadow hover:scale-105 transition" alt="Gallery Image">
+      <img src="https://picsum.photos/id/1041/300/200" class="rounded-lg shadow hover:scale-105 transition" alt="Gallery Image">
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 px-6 bg-gray-100 dark:bg-gray-700">
+    <h2 class="text-2xl font-bold text-center mb-10 dark:text-[#F0FFFF]">FAQs</h2>
+    <div class="max-w-3xl mx-auto space-y-4">
+      <div class="border p-4 rounded cursor-pointer" onclick="toggleFAQ(this)">
+        <h4 class="font-semibold dark:text-[#F0FFFF]">What is AmberTech?</h4>
+        <p class="mt-2 hidden dark:text-[#F0FFFF]">AmberTech builds cool websites for everyone!</p>
+      </div>
+      <div class="border p-4 rounded cursor-pointer" onclick="toggleFAQ(this)">
+        <h4 class="font-semibold dark:text-[#F0FFFF]">Can I get a custom site?</h4>
+        <p class="mt-2 hidden dark:text-[#F0FFFF]">Yes! Just contact us and we’ll build your dream site.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16 px-6 bg-white dark:bg-gray-800">
+    <h2 class="text-2xl font-bold text-center mb-10 dark:text-[#F0FFFF]">What People Say</h2>
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-lg">
+        <p>“Amber made my dream website come true! Amazing work.”</p>
+        <h4 class="mt-2 font-bold dark:text-[#F0FFFF]">– Sara</h4>
+      </div>
+      <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-lg">
+        <p>“So friendly and fast! I love my new portfolio site.”</p>
+        <h4 class="mt-2 font-bold dark:text-[#F0FFFF]">– Ahmed</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-16 px-6 bg-blue-100 dark:bg-blue-900 text-center">
+    <h2 class="text-2xl font-bold mb-4 dark:text-[#F0FFFF]">Stay Updated</h2>
+    <p class="dark:text-[#F0FFFF]">Subscribe to our newsletter for tips & updates!</p>
+    <form class="mt-4">
+      <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-64 dark:bg-gray-700 dark:text-[#F0FFFF]" />
+      <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-r-lg dark:bg-blue-500">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-gray-200 dark:bg-gray-900 text-center">
+    <p class="dark:text-[#F0FFFF]">© 2025 AmberTech. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    function selectPlan(planDiv) {
+      document.querySelectorAll('.plan').forEach(p => p.classList.remove('ring', 'ring-blue-500'));
+      planDiv.classList.add('ring', 'ring-blue-500');
+    }
+
+    function toggleFAQ(faqDiv) {
+      const content = faqDiv.querySelector('p');
+      content.classList.toggle('hidden');
+    }
+  </script>
+<script>
+  function toggleDarkMode() {
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+    const btn = document.getElementById('darkModeBtn');
+
+    // Add rotation animation
+    btn.classList.add('rotate-180');
+
+    // After 300ms, switch theme and icon
+    setTimeout(() => {
+      body.classList.toggle('dark');
+      icon.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+      btn.classList.remove('rotate-180');
+    }, 300);
+  }
+</script>
+
+</body>
+</html>
